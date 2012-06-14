@@ -4,7 +4,7 @@ namespace :activeadmin do
   task :remove_default_user => [:environment] do
     admin_users = AdminUser.where(:email => "admin@example.com")
     admin_users.each do | au |
-      au.delete!
+      au.delete
     end	
   end
 

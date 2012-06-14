@@ -26,7 +26,7 @@ namespace :activeadmin do
   task :scramble_passwords => [:environment] do
     AdminUser.all.each do |au|
       scramble_chars = ['a'..'z','A'..'Z','0'..'9'].collect{|x| x.to_a}.flatten
-      password = (0..50).collect{ o[rand(o.length)]}.join
+      password = (0..50).collect{ scramble_chars[rand(scramble_chars.length)]}.join
 
       au.password = password
       au.password_confirmation = password

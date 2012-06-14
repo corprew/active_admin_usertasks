@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "activeadmin_usertasks"
-  gem.homepage = "http://github.com/corprew/activeadmin_usertasks"
+  gem.name = "active_admin_usertasks"
+  gem.homepage = "http://github.com/corprew/active_admin_usertasks"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{solves some activeadmin admin user use cases}
+  gem.description = %Q{This provides some rake tasks to solve issues with activeadmin as used in production.  Namely, that apps seem to go into production with its default username and password in it that they gain from the initial migrations.}
   gem.email = "github@corprew.org"
   gem.authors = ["Corprew Reed"]
   # dependencies defined in Gemfile
@@ -32,22 +32,5 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
-
 task :default => :test
 
-require 'rdoc/task'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "activeadmin_usertasks #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end

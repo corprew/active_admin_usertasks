@@ -1,6 +1,17 @@
 = activeadmin_usertasks
 
-Description goes here.
+This gem adds some rake tasks to make working with the activeadmin gem easier.
+
+activeadmin:remove_default_user:: removes the default admin user that activeadmin creates
+
+activeadmin:new_admin::  adds a new admin user
+
+activeadmin:scramble_passwords:: scrambles all the passwords of the admin users
+
+The raison d'etre of this gem is that activeadmin generates by default an administrative user with a default password that can be used to get access to the system.
+
+too many of the projects using activeadmin that i've inherited have ended up with this password in production, so it turns out to be easier to add this gem to things than worry about it.
+
 
 == Contributing to activeadmin_usertasks
  

@@ -1,6 +1,6 @@
 # activeadmin_usertasks
 
-This gem adds some rake tasks to make working with the [activeadmin gem](https://github.com/activeadmin) easier.
+This gem adds some rake tasks to make working with the [activeadmin gem](https://github.com/activeadmin) easier.  Note that this gem is from 2012, it still works for the limited, specific thing it does but may not be what you need to solve your 2019 and later security problems.
 
 `activeadmin:remove_default_user` removes the default admin user that activeadmin creates
 
